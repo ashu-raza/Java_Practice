@@ -2,19 +2,22 @@ package Recursion;
 
 import java.util.Scanner;
 
-public class Reverse_An_Array {
-	public static void reverseArray(int[] array, int pointer) {
+public class Is_Array_Sorted {
+	public static boolean isSorted(int[] array, int pointer) {
 		//Base Case
-		if(pointer==array.length) {
-			return;
+		if(pointer == array.length - 1) {
+			return true;
+		}
+		
+		if(array[pointer]>array[pointer+1]) {
+			return false;
 		}
 		
 		//Recursive Call
-		reverseArray(array, pointer+1);
+		boolean recAns = isSorted(array, pointer+1);
 		
 		//My Work
-		System.out.print(array[pointer] + " ");
-		return;
+		return recAns;
 	}
 	
 	public static void main(String[] args) {
@@ -28,10 +31,7 @@ public class Reverse_An_Array {
 			array[i] = sc.nextInt();
 		}
 		
-		int pointer = 0;
-		
-		reverseArray(array, pointer);
-		return;
+		System.out.println(isSorted(array, 0));
 	}
 
 }
