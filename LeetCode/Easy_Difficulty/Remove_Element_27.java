@@ -57,5 +57,4 @@ public class Remove_Element_27 {
 		
 		removeElement(nums, val);
 	}
-
 }
