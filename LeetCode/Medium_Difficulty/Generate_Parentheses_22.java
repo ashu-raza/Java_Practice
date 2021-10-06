@@ -7,7 +7,7 @@ public class Generate_Parentheses_22 {
 	static int N;
     static ArrayList<String> validList;
     
-    public List<String> generateParenthesis(int n) {
+    public ArrayList<String> generateParenthesis(int n) {
         N = n;
         validList = new ArrayList<>();
         
