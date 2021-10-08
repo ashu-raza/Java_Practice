@@ -39,6 +39,7 @@ public class Generate_Parentheses {
 		if(closersUsed<N) {
 			genBalancedParenthesis(openersUsed, closersUsed+1, output + ")");
 		}
+		
 		if(openersUsed<N) {
 			genBalancedParenthesis(openersUsed+1, closersUsed, output + "(");
 		}
